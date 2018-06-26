@@ -6,10 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import com.splitroom.splitroomapi.model.Room;
 
-/* Copyright (C)  All Rights Reserved
- * Written by trinadhkoya 
- */
-
 @Repository
 public interface RoomRepository extends JpaRepository<Room, Long> {
 

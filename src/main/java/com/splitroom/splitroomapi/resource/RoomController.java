@@ -40,7 +40,7 @@ public class RoomController {
 
 
 	@GetMapping("/rooms/{id}")
-	public ResponseEntity<Room> getroomById(@PathVariable Long id) {
+	public ResponseEntity<Room> getRoomById(@PathVariable Long id) {
 		Room room = roomRepository.findOne(id);
 		if (room == null) {
 			return ResponseEntity.notFound().build();
@@ -50,14 +50,14 @@ public class RoomController {
 
 
 	@PostMapping(value = "/rooms", consumes = MediaType.APPLICATION_JSON_VALUE)
-	public Room createroom(@Valid @RequestBody Room room) {
+	public Room addRoom(@Valid @RequestBody Room room) {
 		return roomRepository.save(room);
 	}
 
 
 	@PutMapping("/rooms/{id}")
-	public ResponseEntity<Room> updateroom(@PathVariable Long id,
-			@Valid @RequestBody Room roomDetails) {
+	public ResponseEntity<Room> updateRoom(@PathVariable Long id,
+										   @Valid @RequestBody Room roomDetails) {
 		Room room = roomRepository.findOne(id);
 		if (room == null) {
 			return ResponseEntity.notFound().build();
@@ -71,7 +71,7 @@ public class RoomController {
 
 
 	@DeleteMapping("/rooms/{id}")
-	public ResponseEntity<Room> deleteroom(@PathVariable Long id) {
+	public ResponseEntity<Room> deleteRoom(@PathVariable Long id) {
 		Room room = roomRepository.findOne(id);
 		if (room == null) {
 			return ResponseEntity.notFound().build();

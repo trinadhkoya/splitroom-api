@@ -21,9 +21,6 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-/* Copyright (C)  All Rights Reserved
- * Written by trinadhkoya 
- */
 
 @Entity
 @Table(name = "room")
