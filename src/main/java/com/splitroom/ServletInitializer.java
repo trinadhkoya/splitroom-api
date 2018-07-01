@@ -1,4 +1,4 @@
-package com.splitroom.splitroomapi;
+package com.splitroom;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
