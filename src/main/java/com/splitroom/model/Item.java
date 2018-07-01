@@ -8,7 +8,7 @@ public class Item
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private long individualAmount;
+    private double individualAmount;
     @JoinColumn(name = "ROOM_ID")
     private long roomId;
 
@@ -20,7 +20,7 @@ public class Item
         this.id = id;
     }
 
-    public long getIndividualAmount() {
+    public double getIndividualAmount() {
         return individualAmount;
     }
 
